@@ -3,7 +3,7 @@ import IssueRow from './IssueRow.jsx';
 
 export default class IssueTable extends React.Component {
   render() {
-    const issueRows = this.props.issues.map((issue) => (
+    const issueRows = this.props.issues.map(issue => (
       <IssueRow key={issue.id} issue={issue}></IssueRow>
     ));
     return (

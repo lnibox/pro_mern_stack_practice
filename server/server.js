@@ -54,7 +54,7 @@ app.post('/api/issues', (req, res) => {
     return;
   }
   db.collection('issues')
-    .insertOne(newIssue)
+    .insertOne(Issue.cleanupIssue(newIssue))
     .then((result) => {
       db.collection('issues')
         .find({ _id: result.insertedId })
