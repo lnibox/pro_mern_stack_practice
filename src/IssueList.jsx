@@ -4,6 +4,7 @@ import IssueAdd from './IssueAdd.jsx';
 import IssueFilter from './IssueFilter.jsx';
 import IssueTable from './IssueTable.jsx';
 
+const REACT_VERION = React.version;
 export default class IssueList extends React.Component {
   constructor() {
     super();
@@ -74,6 +75,7 @@ export default class IssueList extends React.Component {
         <IssueTable issues={this.state.issues} />
         <hr />
         <IssueAdd createIssue={this.createIssue} />
+        <div>React version: {REACT_VERION}</div>
       </div>
     );
   }

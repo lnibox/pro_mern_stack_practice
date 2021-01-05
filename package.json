@@ -11,8 +11,8 @@
     "compile-server": "babel server --presets es2015 --out-dir dist --source-maps",
     "watch-server": "babel server --presets es2015 --out-dir dist --source-maps --watch",
     "start-hook": "nodemon -w dist dist/start_hook.js",
-    "dev-all": "npm run watch & npm run watch-server & npm run start",
-    "dev-all-hook": "npm run watch & npm run start-hook",
+    "dev-all": "npm run compile & npm run watch & npm run watch-server & npm run start",
+    "dev-all-hook": "npm run compile & npm run watch & npm run start-hook",
     "lint": "eslint --ext js,jsx server src webpack.config.js"
   },
   "author": "lny",
@@ -20,9 +20,9 @@
   "dependencies": {
     "babel-polyfill": "^6.13.0",
     "body-parser": "^1.19.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0",
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
+    "react-router": "2.7.0",
     "source-map-support": "^0.5.19",
     "webpack-dev-server": "^1.15.0",
     "whatwg-fetch": "^3.5.0"
@@ -44,6 +44,7 @@
     "nodemon": "^1.10.0",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^4.0.2",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "prop-types": "15.7.2"
   }
 }
